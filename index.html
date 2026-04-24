@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dolce Forno — Bolos artesanais</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="#">Dolce Forno</a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#cardapio">Cardápio</a>
+        <a href="#encomenda">Encomendar</a>
+        <a href="#sobre">Sobre</a>
+      </nav>
+      <button type="button" class="btn btn--ghost nav-cta" data-scroll="encomenda">Fale conosco</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Desde 2018 em forno de pedra</p>
+          <h1>Bolos que marcam <em>momentos</em> especiais.</h1>
+          <p class="lead">
+            Massas leves, recheios generosos e acabamento impecável. Encomende para aniversários,
+            casamentos ou aquele café da tarde que merece um upgrade.
+          </p>
+          <div class="hero-actions">
+            <button type="button" class="btn btn--primary" data-scroll="cardapio">Ver cardápio</button>
+            <button type="button" class="btn btn--outline" data-scroll="encomenda">Pedir orçamento</button>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-photo-wrap">
+            <img
+              class="hero-photo"
+              src="images/bolo-cenoura-prato.png"
+              alt="Mini bolo de cenoura com cobertura de chocolate e granulado, em prato de porcelana com detalhes dourados."
+              width="800"
+              height="1000"
+              loading="eager"
+              decoding="async"
+            />
+            <div class="hero-card hero-card--overlay">
+              <span class="hero-badge">Destaque da semana</span>
+              <p class="hero-card-title">Bolo de cenoura com chocolate</p>
+              <p class="hero-card-meta">Individual e fatias — peça orçamento</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cardapio" class="section menu">
+      <div class="wrap">
+        <header class="section-head">
+          <h2>Cardápio</h2>
+          <p>Escolha o tamanho e personalize recheio e cobertura no pedido.</p>
+        </header>
+        <ul class="menu-grid" id="menu-list"></ul>
+      </div>
+    </section>
+
+    <section id="sobre" class="section about">
+      <div class="wrap about-grid">
+        <div class="about-body">
+          <h2>Sobre a Dolce Forno</h2>
+          <p>
+            Trabalhamos com ingredientes selecionados, sem conservantes em excesso, e prazos realistas
+            para cada bolo sair do forno no ponto certo. Atendemos região metropolitana com entrega
+            agendada ou retirada na loja.
+          </p>
+          <ul class="about-stats">
+            <li><strong>48h</strong> antecedência mínima para bolos médios</li>
+            <li><strong>100%</strong> artesanal, sem massa industrial</li>
+            <li><strong>+2.400</strong> encomendas entregues</li>
+          </ul>
+        </div>
+        <figure class="about-figure">
+          <img
+            src="images/bolo-cenoura-mesa.png"
+            alt="Mesa com bolos de cenoura embalados, café com leite e bolo individual com chocolate."
+            width="900"
+            height="1200"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <section id="encomenda" class="section cta">
+      <div class="wrap cta-inner">
+        <div>
+          <h2>Pronto para encomendar?</h2>
+          <p>Envie data, quantidade de pessoas e referências de sabor. Respondemos em até um dia útil.</p>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <label>
+            <span>Nome</span>
+            <input type="text" name="nome" required autocomplete="name" />
+          </label>
+          <label>
+            <span>E-mail</span>
+            <input type="email" name="email" required autocomplete="email" />
+          </label>
+          <label class="full">
+            <span>Mensagem</span>
+            <textarea name="mensagem" rows="4" required placeholder="Data do evento, tamanho desejado, sabores..."></textarea>
+          </label>
+          <button type="submit" class="btn btn--primary full">Enviar pedido</button>
+          <p class="form-note" id="form-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p class="logo logo--footer">Dolce Forno</p>
+      <p class="footer-copy">© <span id="year"></span> — Bolos artesanais. Feito com manteiga de verdade.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
