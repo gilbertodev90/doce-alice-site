@@ -3,21 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dolce Forno — Bolos artesanais</title>
+  <title>Doce Alice — Bolos &amp; doces</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="logo" href="#">Dolce Forno</a>
+      <a class="logo-mark" href="#" aria-label="Doce Alice — início">
+        <img
+          class="logo-img"
+          src="images/logo-doce-alice.png"
+          alt=""
+          width="160"
+          height="160"
+          decoding="async"
+        />
+      </a>
       <nav class="nav" aria-label="Principal">
         <a href="#cardapio">Cardápio</a>
         <a href="#encomenda">Encomendar</a>
-        <a href="#sobre">Sobre</a>
+        <a href="#sobre-nos">Sobre nós</a>
       </nav>
       <button type="button" class="btn btn--ghost nav-cta" data-scroll="encomenda">Fale conosco</button>
     </div>
@@ -27,7 +36,7 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Desde 2018 em forno de pedra</p>
+          <p class="eyebrow">Bolos &amp; doces — feito com amor</p>
           <h1>Bolos que marcam <em>momentos</em> especiais.</h1>
           <p class="lead">
             Massas leves, recheios generosos e acabamento impecável. Encomende para aniversários,
@@ -69,14 +78,17 @@
       </div>
     </section>
 
-    <section id="sobre" class="section about">
-      <div class="wrap about-grid">
-        <div class="about-body">
-          <h2>Sobre a Dolce Forno</h2>
-          <p>
-            Trabalhamos com ingredientes selecionados, sem conservantes em excesso, e prazos realistas
-            para cada bolo sair do forno no ponto certo. Atendemos região metropolitana com entrega
-            agendada ou retirada na loja.
+    <section id="sobre-nos" class="section sobre-nos" aria-labelledby="sobre-nos-titulo">
+      <div class="wrap sobre-nos-grid">
+        <div class="sobre-nos-body">
+          <h2 id="sobre-nos-titulo">Sobre nós</h2>
+          <p class="sobre-nos-placeholder">
+            <em>Aqui entra o seu texto:</em> conte quem é a Alice, como nasceu a Doce Alice e o que você
+            quer que as pessoas sintam ao pedir um bolo.
+          </p>
+          <p class="sobre-nos-placeholder">
+            Você pode apagar estes dois parágrafos e escrever com suas palavras — inclusive em mais de um
+            bloco, se preferir.
           </p>
           <ul class="about-stats">
             <li><strong>48h</strong> antecedência mínima para bolos médios</li>
@@ -84,12 +96,12 @@
             <li><strong>+2.400</strong> encomendas entregues</li>
           </ul>
         </div>
-        <figure class="about-figure">
+        <figure class="sobre-nos-photo">
           <img
-            src="images/bolo-cenoura-mesa.png"
-            alt="Mesa com bolos de cenoura embalados, café com leite e bolo individual com chocolate."
-            width="900"
-            height="1200"
+            src="images/sobre-nos-alice.png"
+            alt="Alice, confeiteira da Doce Alice, com touca de pâtisserie e batedores, em cozinha com macarons ao fundo."
+            width="800"
+            height="800"
             loading="lazy"
             decoding="async"
           />
@@ -125,8 +137,18 @@
 
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <p class="logo logo--footer">Dolce Forno</p>
-      <p class="footer-copy">© <span id="year"></span> — Bolos artesanais. Feito com manteiga de verdade.</p>
+      <div class="footer-brand">
+        <img
+          class="footer-logo"
+          src="images/logo-doce-alice.png"
+          alt=""
+          width="140"
+          height="140"
+          decoding="async"
+        />
+        <p class="footer-tagline">Bolos &amp; doces — feito com amor</p>
+      </div>
+      <p class="footer-copy">© <span id="year"></span> Doce Alice. Encomendas e retirada sob consulta.</p>
     </div>
   </footer>
 
