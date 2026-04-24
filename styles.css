@@ -494,6 +494,7 @@ a:hover {
 .cta-inner {
   display: grid;
   gap: 2rem;
+  min-width: 0;
 }
 
 @media (min-width: 800px) {
@@ -505,8 +506,15 @@ a:hover {
 
 .contact-form {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1rem;
+  min-width: 0;
+}
+
+@media (min-width: 600px) {
+  .contact-form {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .contact-form label {
@@ -515,6 +523,7 @@ a:hover {
   gap: 0.35rem;
   font-size: 0.85rem;
   font-weight: 500;
+  min-width: 0;
 }
 
 .contact-form label.full {
@@ -530,6 +539,14 @@ a:hover {
   border: 1px solid rgba(255, 249, 243, 0.25);
   background: rgba(255, 249, 243, 0.08);
   color: var(--cream);
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.contact-form .btn.full {
+  width: 100%;
+  justify-content: center;
 }
 
 .contact-form input::placeholder,
