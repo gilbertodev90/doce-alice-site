@@ -84,7 +84,11 @@ document.getElementById("contact-form")?.addEventListener("submit", (e) => {
 
   const numeroWhatsapp = "5511990059035";
   const urlWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(texto)}`;
-  window.open(urlWhatsapp, "_blank", "noopener,noreferrer");
+  const novaAba = window.open(urlWhatsapp, "_blank", "noopener,noreferrer");
+  if (!novaAba) {
+    // Fallback para navegadores que bloqueiam pop-up.
+    window.location.href = urlWhatsapp;
+  }
 
   const feedback = document.getElementById("form-feedback");
   if (feedback) {
