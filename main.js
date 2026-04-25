@@ -66,12 +66,31 @@ document.getElementById("year").textContent = String(new Date().getFullYear());
 
 document.getElementById("contact-form")?.addEventListener("submit", (e) => {
   e.preventDefault();
+  const form = e.target;
+  if (!(form instanceof HTMLFormElement)) return;
+
+  const formData = new FormData(form);
+  const nome = String(formData.get("nome") || "").trim();
+  const email = String(formData.get("email") || "").trim();
+  const mensagem = String(formData.get("mensagem") || "").trim();
+
+  const texto = [
+    "Oi! Vim pelo site da Confeitaria Doce Alice.",
+    "",
+    `Nome: ${nome}`,
+    `E-mail: ${email}`,
+    `Mensagem: ${mensagem}`,
+  ].join("\n");
+
+  const numeroWhatsapp = "5511990059035";
+  const urlWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(texto)}`;
+  window.open(urlWhatsapp, "_blank", "noopener,noreferrer");
+
   const feedback = document.getElementById("form-feedback");
   if (feedback) {
-    feedback.textContent =
-      "Obrigado! Em um site real, aqui iria o envio para o servidor ou WhatsApp.";
+    feedback.textContent = "Abrimos o WhatsApp com a sua mensagem preenchida.";
   }
-  e.target.reset();
+  form.reset();
 });
 
 renderMenu();
